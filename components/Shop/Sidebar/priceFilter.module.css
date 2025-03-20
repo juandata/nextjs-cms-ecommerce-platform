@@ -1,0 +1,129 @@
+.container {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.container i {
+  font-size: 20px;
+}
+
+.slider {
+  position: relative;
+  width: 200px;
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right_value {
+  position: absolute;
+}
+
+.slider__track,
+.slider__range {
+  border-radius: 3px;
+  height: 5px;
+}
+
+.slider__track {
+  background-color: #e1e9f6;
+  width: 100%;
+  z-index: 1;
+}
+
+.slider__range {
+  background-color: var(--primary);
+  z-index: 2;
+}
+
+.slider__left_value,
+.slider__right_value {
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+
+.input {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 200px;
+  outline: none;
+  border: none !important;
+  top: 0;
+}
+
+.thumb:focus {
+  box-shadow: none !important;
+}
+
+.thumb_left {
+  z-index: 3;
+}
+
+.thumb_right {
+  z-index: 4;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: var(--primary);
+  border: 3px solid #f1f5f7;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: var(--primary);
+  border: 3px solid #f1f5f7;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+.container input[type="number"] {
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+}
+
+.container button {
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary);
+  color: var(--primary_contrast);
+  padding: 0;
+}

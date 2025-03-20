@@ -1,0 +1,23 @@
+User-agent: *
+Disallow: /checkout/
+Disallow: /customer/
+Disallow: /cart/
+Disallow: /*index.scss
+Disallow: /*reqwest/index
+Disallow: /wangpu/
+Disallow: /shop/*.htm
+Disallow: /catalog/
+Disallow: /*from=
+Disallow: /wow/gcp/
+Disallow: /wow/camp/User-agent: *
+Disallow: /checkout/
+Disallow: /customer/
+Disallow: /cart/
+Disallow: /*index.scss
+Disallow: /*reqwest/index
+Disallow: /wangpu/
+Disallow: /shop/*.htm
+Disallow: /catalog/
+Disallow: /*from=
+Disallow: /wow/gcp/
+Disallow: /wow/camp/

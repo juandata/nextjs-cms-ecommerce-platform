@@ -1,0 +1,162 @@
+.category_container {
+  position: relative;
+}
+
+.menu {
+  min-width: 280px;
+  position: absolute;
+  left: 0;
+  top: 56px;
+  min-height: 100px;
+  background: #ffffff;
+  border: 1px solid var(--border_color);
+  border-radius: 5px;
+  cursor: default;
+}
+
+.menu::before {
+  background-color: #fff;
+  border-left: 1px solid var(--border_color);
+  border-top: 1px solid var(--border_color);
+  content: "";
+  height: 17px;
+  position: absolute;
+  left: 18px;
+  top: -9px;
+  transform: rotate(45deg);
+  width: 18px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.loader svg {
+  animation: spin 1s linear infinite;
+}
+
+.menu ul,
+.subMenu ul {
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  line-height: 19px;
+  border-bottom: 1px solid var(--border_color);
+  list-style: none;
+}
+
+.item:last-child {
+  border: none;
+}
+
+.item a {
+  width: 100%;
+  padding: 10px;
+  min-height: 34px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.item a:hover {
+  color: var(--primary);
+}
+
+.menu li:hover .subMenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu li:hover .link:before {
+  transform: rotate(135deg);
+  border: solid var(--primary);
+  border-width: 0 1px 1px 0;
+}
+
+.item .link:before {
+  content: "";
+  position: absolute;
+  right: 9px;
+  transition: transform 0.4s;
+  border: solid #838383;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.item span {
+  font-weight: 500;
+  margin-left: 10px;
+  font-size: 15px;
+  line-height: 0;
+  transition: 0.2s ease;
+}
+
+.item img {
+  transition: 0.4s ease;
+}
+
+.item:hover img {
+  transform: scaleX(-1);
+}
+
+.subMenu {
+  background-color: #fff;
+  border: 1px solid var(--border_color);
+  border-radius: 5px;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+  left: 100%;
+  min-width: 780px;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.subMenu li {
+  list-style: none;
+}
+
+.subMenu li a,
+.subMenu li span {
+  font-weight: 400;
+  display: block;
+  color: #848484;
+}
+
+.subMenu li:last-child {
+  border-bottom: none;
+}
+
+.subMenu li span {
+  margin-left: 0;
+  line-height: 8px;
+}
+
+.child a {
+  padding: 5px 10px;
+  min-height: 26px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
